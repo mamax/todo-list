@@ -39,6 +39,10 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (2.3.2.0)
+      sass (~> 3.2)
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -226,6 +230,7 @@ GEM
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
     websocket (1.2.2)
+    will_paginate (3.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -234,6 +239,8 @@ PLATFORMS
 
 DEPENDENCIES
   actionview
+  bootstrap-sass (= 2.3.2.0)
+  bootstrap-will_paginate (= 0.0.9)
   byebug (= 5.0.0)
   capybara
   childprocess (= 0.5.6)
