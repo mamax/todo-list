@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :projects, dependent: :destroy
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 
@@ -16,7 +17,6 @@ class User < ActiveRecord::Base
   end
 
   private
-
   def create_remember_token
     self.remember_token = User.encrypt(User.new_remember_token)
   end

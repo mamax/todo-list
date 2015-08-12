@@ -13,6 +13,8 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:remember_token) }
+  # it { should respond_to(:admin) }
+  it { should respond_to(:projects) }
 
   it { should be_valid }
 
@@ -87,6 +89,30 @@ describe User do
 
       it { should_not eq user_with_invalid_password }
       specify { expect(user_with_invalid_password).to be_falsey }
+    end
+  end
+
+  describe "project associations" do
+
+    before { @user.save }
+    let!(:older_project) do
+      FactoryGirl.create(:project, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_project) do
+      FactoryGirl.create(:project, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right projects in the right order" do
+      expect(@user.projects.to_a).to eq [newer_project, older_project]
+    end
+
+    it "should destroy associated projects" do
+      projects = @user.projects.to_a
+      @user.destroy
+      expect(projects).not_to be_empty
+      projects.each do |project|
+        expect(Project.where(id: project.id)).to be_empty
+      end
     end
   end
 end
