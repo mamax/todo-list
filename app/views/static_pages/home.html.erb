@@ -13,17 +13,17 @@
 
           <div class="edit-list">
 
-            <%= link_to "edit".html_safe, edit_project_path(project) %>
+            <%= link_to "edit", edit_project_path(project) %>
 
             <div class="line"></div>
-            <%= link_to "remove".html_safe, project, method: :delete %>
+            <%= link_to "remove", project, method: :delete %>
           </div>
         </div>
       </div>
     <% end %>
 
     <div class="center">
-    <%= link_to "Add project!", new_project_path, class: "btn btn-large btn-primary" %>
+    <%= link_to "Add TODO list!", new_project_path, class: "btn btn-large btn-primary" %>
     </div>
 <% else %>
     <div class="center hero-unit">
