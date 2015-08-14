@@ -1,8 +1,37 @@
 <% provide(:title, 'Home') %>
-<div class="center hero-unit">
-  <h1>SOME TODO LIST</h1>
-  <h3>FROM RUBY GARAGE</h3>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 
-</div>
+<% if signed_in? %>
+    <% @projects.each do |project| %>
+      <div class="center hero-unit">
+        <div class="list-header">
+          <%= image_tag("table.png", class: "note-img") %>
+
+          <div class="project">
+            <%= project.name %>
+          </div>
+
+          <div class="edit-list">
+
+            <%= link_to "edit".html_safe, edit_project_path(project) %>
+
+            <div class="line"></div>
+            <%= link_to "remove".html_safe, project, method: :delete %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="center">
+    <%= link_to "Add project!", new_project_path, class: "btn btn-large btn-primary" %>
+    </div>
+<% else %>
+    <div class="center hero-unit">
+      <h1>SOME TODO LIST</h1>
+      <h3>FROM RUBY GARAGE</h3>
+
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+    </div>
+<% end %>
+
+

@@ -1,3 +1,71 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.list-header {
+  margin-top: 15px;
+  background: #c4721a;
+  border: 1px solid #315589;
+  border-radius: 1px 2px 0 0;
+}
+
+.edit-list {
+  display: inline-block;
+  vertical-align: inherit;
+}
+
+.project {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #fff;
+  text-shadow:0 1px 0 #fff;
+  width: 560px;
+  margin: 13px 0;
+}
+
+.line {
+  vertical-align: middle;
+  display: inline-block;
+  border-right: 1px solid #bf5a22;
+  height: 16px;
+  margin: 0;
+}
+
+.linetwo {
+  vertical-align: middle;
+  display: inline-block;
+  border-right: 1px solid #999;
+  height: 12px;
+  margin: 0;
+}
+
+.link-list {
+  padding: 5px 10px;
+}
+
+.note-img {
+  margin: 13px 10px;
+}
+
+/* logo */
+
+.logo {
+  padding: 0;
+  font-size: 29px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: uppercase;
+}
+
+.descriptor {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: uppercase;
+  margin-top: -12px;
+}
