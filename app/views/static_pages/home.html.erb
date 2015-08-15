@@ -19,19 +19,49 @@
             <%= link_to "remove", project, method: :delete %>
           </div>
         </div>
+
+        <%= form_for(:task, url: tasks_path, html: { class: "add-task"}) do |f| %>
+            <%= image_tag("Green.png", class: "greenplus")%>
+            <%= f.text_field :content, placeholder: "Start typing here to create a task..." %>
+            <%= f.hidden_field :project_id , value: project.id%>
+            <%= f.submit "Add Task" %>
+        <% end %>
+
+        <ul id="project<%=project.id%>" class="task-list">
+          <% project.tasks.each do |task| %>
+              <li class="task" id="task_<%= task.id %>" >
+                <%= check_box_tag task.id, task.id, task.done, class: "task-check" %>
+
+                <label for=<%=task.id %> ></label>
+                <p><%= task.content %></p>
+
+                <div class="control-task">
+                  <span class="glyphicon glyphicon glyphicon-plus"></span>
+
+                  <div class="linetwo"></div>
+                  <%= link_to "#{image_tag("task_edit_img.png", class: "edit-task")}".html_safe, edit_task_path(task) %>
+
+                  <div class="linetwo"></div>
+                  <%= link_to "#{image_tag("task_delete_img.png", class: "delete-task")}".html_safe, task, method: :delete %>
+                </div>
+              </li>
+          <% end %>
+        </ul>
       </div>
     <% end %>
 
     <div class="center">
     <%= link_to "Add TODO list!", new_project_path, class: "btn btn-large btn-primary" %>
     </div>
+
 <% else %>
+
     <div class="center hero-unit">
       <h1>SOME TODO LIST</h1>
       <h3>FROM RUBY GARAGE</h3>
-
       <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
     </div>
+
 <% end %>
 
 
