@@ -22,7 +22,7 @@
 
         <%= form_for(:task, url: tasks_path, html: { class: "add-task"}) do |f| %>
             <%= image_tag("Green.png", class: "greenplus")%>
-            <%= f.text_field :content, placeholder: "Start typing here to create a task..." %>
+            <%= f.text_field :content, placeholder: "Enter the name of the task..." %>
             <%= f.hidden_field :project_id , value: project.id%>
             <%= f.submit "Add Task" %>
         <% end %>
@@ -39,10 +39,10 @@
                   <span class="glyphicon glyphicon glyphicon-plus"></span>
 
                   <div class="linetwo"></div>
-                  <%= link_to "#{image_tag("task_edit_img.png", class: "edit-task")}".html_safe, edit_task_path(task) %>
+                  <%= link_to "edit".html_safe, edit_task_path(task) %>
 
                   <div class="linetwo"></div>
-                  <%= link_to "#{image_tag("task_delete_img.png", class: "delete-task")}".html_safe, task, method: :delete %>
+                  <%= link_to "delete".html_safe, task, method: :delete %>
                 </div>
               </li>
           <% end %>

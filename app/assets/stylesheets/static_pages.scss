@@ -69,3 +69,12 @@
   text-transform: uppercase;
   margin-top: -12px;
 }
+
+.add-task {
+  background: #ccc;
+  background: linear-gradient(-90deg, #E1E1E1 0%, #ccc 100%);
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  padding: 8px 0 11px 10px;
+}

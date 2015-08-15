@@ -1,17 +1,14 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy, :done]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy, :done]
 
-  # GET /tasks
   def index
     @tasks = Task.order("position")
   end
 
-  # GET /tasks/new
   def new
     @task = Task.new
   end
 
-  # POST /tasks
   def create
     @task = Task.new(task_params)
 
@@ -20,13 +17,12 @@ class TasksController < ApplicationController
         flash[:success] = "Task added!"
         format.html { redirect_to root_path}
       else
-        flash[:alert] = "Content can't be blank or Content is to long (maximim is 70 characters)"
+        flash[:error] = "Can't be blank or should be less than 100 characters"
         format.html { redirect_to root_path }
       end
     end
   end
 
-  # PATCH/PUT /tasks/1
   def update
     respond_to do |format|
       if @task.update(task_params)
@@ -38,7 +34,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /tasks/1
   def destroy
     @task.destroy
     flash[:success] = "Task deleted!"
@@ -60,12 +55,11 @@ class TasksController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_task
+
+  def correct_user
     @task = Task.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def task_params
     params.require(:task).permit(:content, :project_id, :done, :position)
   end
