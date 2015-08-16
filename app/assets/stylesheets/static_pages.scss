@@ -124,7 +124,7 @@ html, body {
 /*Task*/
 
 input[type="checkbox"] {
-  display: inline-flex;
+  display: inline-block;
 }
 
 input[type="checkbox"] + label::before {
@@ -147,11 +147,12 @@ input[type="checkbox"] + label::before {
   padding: 15px 10px;
 }
 
+
 .control-task{
   position: absolute;
   top: 50%;
   margin-top: -2px;
-  display: inline-flex;
+  display: inline-block;
 }
 
 .task:hover {
@@ -163,11 +164,12 @@ ul.task-list {
 }
 
 .task-list > .task:last-child {
+  border-bottom: none;
   border-radius: 0 0 15px 15px;
 }
 
 li.task p {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .task p {
