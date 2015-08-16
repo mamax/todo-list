@@ -5,6 +5,7 @@
 $grayLight: #999;
 $grayDarker: #555;
 $gray: #222;
+$grayLighter: #A6A7BD;
 
 /* mixins, variables, etc. */
 
@@ -68,7 +69,6 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
@@ -126,7 +126,7 @@ footer {
 
 /* forms */
 
-input, textarea, select{
+input, textarea, select, .uneditable-input{
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -160,7 +160,7 @@ input {
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: #393DDA;
     }
   }
   strong {
@@ -201,10 +201,7 @@ input {
 .timestamp {
   color: $grayLight;
 }
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
+
 aside {
   textarea {
     height: 100px;
