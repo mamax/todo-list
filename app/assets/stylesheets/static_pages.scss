@@ -3,9 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+html, body {
+  background: linear-gradient(to bottom, #CAD2AF 25%, #BE7E00 75%);
+}
+
 .list-header {
-  margin-top: 15px;
-  background: #c4721a;
+  margin-top: 5px;
+  background: #554BAC;
   border: 1px solid #315589;
   border-radius: 1px 2px 0 0;
 }
@@ -33,16 +37,8 @@
   margin: 0;
 }
 
-.linetwo {
-  vertical-align: middle;
-  display: inline-block;
-  border-right: 1px solid #999;
-  height: 12px;
-  margin: 0;
-}
-
 .link-list {
-  padding: 5px 10px;
+  padding: 15px 10px;
 }
 
 .note-img {
@@ -70,11 +66,146 @@
   margin-top: -12px;
 }
 
+/* Task Add*/
+
 .add-task {
   background: #ccc;
-  background: linear-gradient(-90deg, #E1E1E1 0%, #ccc 100%);
-  border-left: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  border-right: 1px solid #aaa;
-  padding: 8px 0 11px 10px;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.add-task input[type="text"] {
+  width: 575px;
+  height: 50px;
+  font-size: 14px;
+  color: #bbb;
+  background-color: #fff;
+  border: 0;
+}
+
+.add-task input[type="submit"] {
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+  font-size:14px;
+  color: #fff;
+  text-align:center;
+  background: #345E43;
+  border-radius: 0 5px 5px 0;
+}
+
+.greenplus {
+  width: 20px;
+  margin-right: 15px;
+}
+
+/* Button */
+
+.add-button {
+  padding: 10px;
+  display: table;
+  margin: 40px auto 0;
+  background: linear-gradient(to bottom, #5681b6 0%,#335791 100%);
+  border: 1px solid #315589;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #28405D;
+  img {
+    margin-right: 10px;
+  }
+}
+
+.add-button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Task*/
+
+input[type="checkbox"] {
+  display: inline-flex;
+}
+
+input[type="checkbox"] + label::before {
+  position: absolute;
+  top: 50%;
+  width:14px;
+  height:15px;
+  margin: -1px 13px 0 13px;
+  //background: image_url('checkbox.png') 0 -16px no-repeat;
+  content:"";
+  cursor: pointer;
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: image_url('checkbox.png') no-repeat;
+}
+
+.sort-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  padding: 15px 10px;
+}
+
+.edit-task {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px 10px;
+}
+.delete-task {
+  padding: 15px 10px;
+}
+
+.control-task{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -2px;
+  display: inline-flex;
+}
+
+.task:hover {
+  background: #FCFED5;
+}
+
+ul.task-list {
+  padding-left: 0;
+}
+
+.task-list > .task:last-child {
+  border-bottom: none;
+  border-radius: 0 0 15px 15px;
+}
+
+li.task p {
+  margin-bottom: 0;
+}
+
+.task p {
+  display: inline-block;
+  padding: 16px 23px 17px;
+  background: image_url('border.png') top left repeat-y;
+  border-right: 1px solid #E7EBEA;
+  width: 542px;
+  text-align: justify;
+  margin-left: 39px;
+}
+
+ul.task-list {
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  list-style-type: none;
+}
+
+li.task {
+  background: #fff;
+  border-bottom: 1px solid #E7EBEA;
+  color: #999;
+  font: bold 13px Arial, sans-serif;
+  position: relative;
+  cursor: move;
 }

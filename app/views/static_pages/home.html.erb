@@ -12,7 +12,6 @@
           </div>
 
           <div class="edit-list">
-
             <%= link_to "edit", edit_project_path(project) %>
 
             <div class="line"></div>
@@ -36,13 +35,13 @@
                 <p><%= task.content %></p>
 
                 <div class="control-task">
-                  <span class="glyphicon glyphicon glyphicon-plus"></span>
+                  <span class="glyphicon glyphicon-move"></span>
 
-                  <div class="linetwo"></div>
-                  <%= link_to "edit".html_safe, edit_task_path(task) %>
+                  <div class="line"></div>
+                  <%= link_to "edit", edit_task_path(task) %>
 
-                  <div class="linetwo"></div>
-                  <%= link_to "delete".html_safe, task, method: :delete %>
+                  <div class="line"></div>
+                  <%= link_to "delete", task, method: :delete %>
                 </div>
               </li>
           <% end %>
