@@ -5,6 +5,7 @@
 $grayLight: #999;
 $grayDarker: #555;
 $gray: #222;
+$grayLighter: #A6A7BD;
 
 /* mixins, variables, etc. */
 
@@ -152,7 +153,7 @@ input {
   a {
     float: left;
     padding: 0 5px;
-    border-left: 1px solid $grayLighter;
+    border-left: 1px solid $grayLight;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -160,7 +161,7 @@ input {
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: #393DDA;
     }
   }
   strong {

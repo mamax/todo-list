@@ -28,7 +28,6 @@ group :development, :test do
   gem 'childprocess', '0.5.6'
   gem 'autoprefixer-rails'
   gem 'uglifier', '>= 1.3.0'
-  gem 'jquery-turbolinks'
   gem 'jquery-ui-rails'
 
 
