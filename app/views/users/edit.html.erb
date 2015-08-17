@@ -1,0 +1,14 @@
+<% provide(:title, 'Edit user') %>
+    <h1>Update your profile</h1>
+    <h4><%= @user.email %></h4>
+
+  <div class="center hero-unit">
+  <div class="row">
+    <p>Edit user</p>
+    <%= form_for(@user) do |f| %>
+        <%= render 'users/error_mesages_user'  %>
+        <%= render 'fields', f: f %>
+        <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

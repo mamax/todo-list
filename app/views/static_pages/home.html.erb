@@ -4,6 +4,10 @@
 <% if signed_in? %>
     <% @projects.each do |project| %>
       <div class="center hero-unit">
+
+
+        <h4><%= @user.email %>  <%= link_to " Edit", edit_user_path(@user), title: "edit profile" %></h4>
+
         <div class="list-header">
           <%= image_tag("table.png", class: "note-img") %>
 
