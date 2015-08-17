@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 describe "Project pages" do
 
@@ -13,20 +14,26 @@ describe "Project pages" do
     describe "with invalid information" do
 
       it "should not create a project" do
-        expect { click_button "Add todo list" }.not_to change(Project, :count)
+        before do
+          click_button "Add TODO list"
+          fill_in 'project_name', with: " "
+        end
+        expect { click_button "Save" }.not_to change(Project, :count)
       end
 
       describe "error messages" do
-        before { click_button "Add todo list" }
+        after { click_button "Save" }
         it { should have_content('error') }
       end
     end
 
     describe "with valid information" do
-
-      before { fill_in 'project_name', with: "Lorepsum" }
+      before do
+        click_button "Add TODO list"
+        fill_in 'project_name', with: "Lorepsum"
+      end
       it "should create a project" do
-        expect { click_button "Add todo list" }.to change(Project, :count).by(1)
+        expect { click_button "Save" }.to change(Project, :count).by(1)
       end
     end
   end
