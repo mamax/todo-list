@@ -43,8 +43,9 @@ GEM
     bcrypt-ruby (3.1.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.5.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.3.0)
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.2.2)
@@ -244,33 +245,33 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionview
+  actionview (= 4.2.3)
   autoprefixer-rails
   bcrypt-ruby (= 3.1.2)
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass (= 3.3.5.1)
   bootstrap-will_paginate (= 0.0.9)
   byebug (= 5.0.0)
   capybara
   childprocess (= 0.5.6)
-  coffee-rails (~> 4.1.0)
+  coffee-rails (= 4.1.0)
   factory_girl_rails (= 4.2.1)
   guard-rspec (= 4.6.2)
   guard-spork (= 2.1.0)
-  jbuilder (~> 2.0)
-  jquery-rails
-  jquery-ui-rails
+  jbuilder (= 2.3.1)
+  jquery-rails (= 4.0.4)
+  jquery-ui-rails (= 5.0.5)
   pg (= 0.18.2)
   rails (= 4.2.3)
   rails_12factor (= 0.0.3)
-  rspec-rails
-  sass-rails (~> 5.0)
+  rspec-rails (= 3.3.3)
+  sass-rails (= 5.0.3)
   sdoc
-  selenium-webdriver
+  selenium-webdriver (= 2.47.1)
   spork-rails (= 4.0.0)
-  turbolinks
-  uglifier (>= 1.3.0)
-  web-console
-  will_paginate
+  turbolinks (= 2.5.3)
+  uglifier (= 2.7.1)
+  web-console (= 2.2.1)
+  will_paginate (= 3.0.7)
 
 BUNDLED WITH
    1.10.6
