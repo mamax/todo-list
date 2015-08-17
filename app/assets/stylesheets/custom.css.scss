@@ -1,14 +1,10 @@
 @import 'bootstrap';
 
-/* universal */
-
+/* mixins, variables, etc. */
 $grayLight: #999;
 $grayDarker: #555;
 $gray: #222;
 $grayLighter: #A6A7BD;
-
-/* mixins, variables, etc. */
-
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
@@ -18,6 +14,10 @@ $grayMediumLight: #eaeaea;
 }
 
 /* universal */
+
+html, body {
+  background: linear-gradient(to bottom, #CAD2AF 25%, #BE7E00 75%) no-repeat center center fixed;
+}
 
 html {
   overflow-y: scroll;
