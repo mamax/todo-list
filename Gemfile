@@ -3,8 +3,9 @@ ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   gem 'rails', '4.2.3'
+  gem 'pg', '0.18.2'
   gem 'sass-rails', '5.0.3'
-  gem 'bootstrap-sass', '3.3.5.1'
+  gem 'bootstrap-sass', '2.3.2.0'
   gem 'bootstrap-will_paginate', '0.0.9'
   gem 'will_paginate', '3.0.7'
   gem 'bcrypt-ruby', '3.1.2'
@@ -26,8 +27,7 @@ group :development, :test do
   gem 'uglifier', '2.7.1'
   gem 'jquery-ui-rails', '5.0.5'
   gem 'jquery-rails', '4.0.4'
-
-
+  gem 'jquery-turbolinks'
 end
 
 group :test do
@@ -41,6 +41,5 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.18.2'
   gem 'rails_12factor', '0.0.3'
 end
