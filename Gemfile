@@ -5,7 +5,7 @@ ruby '2.2.2'
   gem 'rails', '4.2.3'
   gem 'pg', '0.18.2'
   gem 'sass-rails', '~> 5.0'
-  # gem 'bootstrap-sass', '~> 3.2.0'
+  gem 'bootstrap-sass', '2.3.2.0'
   gem 'bootstrap-will_paginate', '0.0.9'
   gem 'will_paginate'
   gem 'bcrypt-ruby', '3.1.2'
@@ -27,13 +27,10 @@ group :development, :test do
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '2.1.0'
   gem 'childprocess', '0.5.6'
-  gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
   gem 'uglifier', '>= 1.3.0'
   gem 'jquery-turbolinks'
   gem 'jquery-ui-rails'
-
-
 end
 
 group :test do
@@ -47,6 +44,5 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.18.2'
   gem 'rails_12factor', '0.0.3'
 end
