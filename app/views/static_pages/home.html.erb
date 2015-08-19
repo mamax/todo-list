@@ -2,11 +2,14 @@
 
 
 <% if signed_in? %>
+    <div class="center">
+    <%= @user.email %>  <%= link_to " Edit", edit_user_path(@user), title: "edit profile" %>
+      <div class="line"></div>
+      <%= link_to "Sign out", signout_path, method: "delete" %>
+    </div>
+
     <% @projects.each do |project| %>
       <div class="center hero-unit">
-
-
-        <h4><%= @user.email %>  <%= link_to " Edit", edit_user_path(@user), title: "edit profile" %></h4>
 
         <div class="list-header">
           <%= image_tag("table.png", class: "note-img") %>
